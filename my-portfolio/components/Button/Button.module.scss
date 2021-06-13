@@ -1,0 +1,20 @@
+@import "../../styles/vars.scss";
+.button {
+  background: linear-gradient(
+    90deg,
+    #d68ff8 1.92%,
+    #43a8d3 64.49%,
+    #00a0aa 100%
+  );
+  padding: 10px 30px;
+  a {
+    font-weight: 500;
+    color: $--clr-white;
+  }
+  border-radius: 20px;
+  border: none;
+  transition: $--tr-filter;
+  &:hover {
+    filter: brightness(115%);
+  }
+}

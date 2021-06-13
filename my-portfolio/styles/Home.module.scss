@@ -1,0 +1,46 @@
+@import "./vars.scss";
+
+// GLOBALS
+
+.section {
+  padding: 50px 20px;
+}
+.content {
+  width: 100%;
+}
+
+.darkerText {
+  color: $--clr-gray;
+}
+
+// INTRO SECTION
+
+.introSec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: 768px) {
+  .introSec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .content {
+    width: 80%;
+  }
+  .introSec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 70%;
+  }
+  .introSec {
+    grid-template-columns: 6fr 5fr;
+  }
+}

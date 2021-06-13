@@ -1,0 +1,54 @@
+@import "../../styles/vars.scss";
+.ballon {
+  animation: ballon 5s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: $--tr-filter;
+  &:hover {
+    filter: brightness(115%);
+  }
+}
+.cloud1 {
+  animation: cloud-1 10s linear infinite;
+}
+.cloud2 {
+  animation: cloud-2 10s linear infinite;
+}
+.cloud3 {
+  animation: cloud-1 10s ease-in-out infinite;
+}
+
+@keyframes ballon {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes cloud-1 {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes cloud-2 {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
