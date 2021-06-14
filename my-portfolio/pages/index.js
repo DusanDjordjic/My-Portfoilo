@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 import LinkButton from "../components/Button/Button";
-import BallonSVG from '../components/BallonSVG/Ballon'
+import BallonSVG from "../components/BallonSVG/Ballon";
 export default function Home() {
   return (
     <div>
@@ -25,7 +25,15 @@ export default function Home() {
             <LinkButton text={"Learn more"} link="https://www.google.com/" />
           </div>
           <div className={classes.introSecImg}>
-            <BallonSVG/>
+            <BallonSVG />
+          </div>
+        </section>
+        <section
+          className={`${classes.projectsSec} ${classes.section}`}
+        >
+          <div className={classes.secTitle}>
+            <div className={classes.bar}></div>
+            <h2>Projects</h2>
           </div>
         </section>
       </main>
