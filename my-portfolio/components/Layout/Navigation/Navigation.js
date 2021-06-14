@@ -11,9 +11,18 @@ const Navigation = () => {
         <p>Portfolio</p>
       </div>
       <ul className={classes.linksContainer}>
-        <li>Projects</li>
-        <li>Technologies</li>
-        <li>About</li>
+        <li>
+          <Link href="/#projects">Projects</Link>
+        </li>
+        <li>
+          <Link href="/#tech">Technologies</Link>
+        </li>
+        <li>
+          <Link href="/#about">About</Link>
+        </li>
+        <li>
+          <Link href="/#dwave">Dwave</Link>
+        </li>
       </ul>
       <ul>
         <li>

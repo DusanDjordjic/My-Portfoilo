@@ -1,7 +1,11 @@
 @import "./vars.scss";
 
 // GLOBALS
-
+.mainContainer {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
 .section {
   padding: 50px 20px;
 }
@@ -24,22 +28,28 @@
 // MEDIA QUERIES
 
 @media only screen and (min-width: 768px) {
+  .mainContainer {
+    width: 95%;
+  }
   .introSec {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 992px) {
-  .content {
-    width: 80%;
+  .mainContainer {
+    margin-top: 0px;
+    width: 90%;
   }
+
   .introSec {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .content {
-    width: 70%;
+  .mainContainer {
+    width: 80%;
   }
+
   .introSec {
     grid-template-columns: 6fr 5fr;
   }

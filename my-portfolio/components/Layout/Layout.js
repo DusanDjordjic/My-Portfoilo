@@ -3,7 +3,7 @@ import Footer from "./Footer/Footer";
 import classes from "./Layout.module.scss";
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className={classes.container}>
       <Navigation />
       {children}
       <Footer />

@@ -25,7 +25,6 @@ h6 {
   margin-bottom: 30px;
   display: inline-block;
   background: linear-gradient(90deg, #ffffff 0%, #bebebe 100%);
-  mix-blend-mode: normal;
   background-clip: text;
   color: transparent;
 }
@@ -37,6 +36,11 @@ p {
 
 h2 {
   font-size: $--font-h2-sm;
+}
+h4 {
+  color: $--clr-gray;
+  background: none;
+  font-size: $--font-h4-sm;
 }
 * {
   margin: 0;
@@ -56,6 +60,9 @@ svg {
   h2 {
     font-size: $--font-h2-md;
   }
+  h4 {
+    font-size: $--font-h4-md;
+  }
 }
 @media only screen and (min-width: 992px) {
   p,
@@ -64,5 +71,8 @@ svg {
   }
   h2 {
     font-size: $--font-h2-lg;
+  }
+  h4 {
+    font-size: $--font-h4-lg;
   }
 }
