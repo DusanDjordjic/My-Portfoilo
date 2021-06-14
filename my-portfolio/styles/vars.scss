@@ -1,6 +1,7 @@
 // colors
 
 $--clr-darkblue: #0f1624;
+$--clr-hover-blue: rgb(33, 45, 69);
 $--clr-white: #f4f4f4;
 $--clr-gray: rgba(#f4f4f4, 0.6);
 
@@ -15,3 +16,7 @@ $--font-h2-lg: 36px;
 
 // transition
 $--tr-filter: filter 0.2s;
+$--tr-all: all 0.2s;
+// svg sizes
+
+$--svg-size: 30px;
