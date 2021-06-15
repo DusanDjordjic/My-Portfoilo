@@ -1,14 +1,19 @@
 import classes from "./Project.module.scss";
 import { FaGithub } from "react-icons/fa";
 import WhiteBar from "../Bars/WhiteBar";
-import Badge from "../Badge/Badge";
+
 import Link from "next/link";
 import Image from "next/image";
 const Project = (props) => {
-  const { title, imageSrc, github, tech, description } = props;
+  const { title, imageSrc, github, tech, description, ribbon } = props;
   return (
-    <div className={classes.project}>
-      <Badge type={"finished"} />
+    <div
+      className={`${classes.project} ${
+        ribbon == "ribbonFinished"
+          ? classes.ribbonFinished
+          : classes.ribbonInprogress
+      }`}
+    >
       <div className={classes.imgContainer}>
         <Image src={imageSrc} layout="responsive" height={430} width={602} />
       </div>

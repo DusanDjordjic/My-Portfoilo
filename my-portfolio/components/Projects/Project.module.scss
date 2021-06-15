@@ -1,8 +1,51 @@
 @import "../../styles/vars.scss";
+.ribbonFinished::before,
+.ribbonInprogress::before {
+  position: absolute;
+  content: "";
+  background: #2b3d62;
+  height: 28px;
+  width: 28px;
+  /* Added lines */
+  top: 2rem;
+  right: -0.5rem;
+  transform: rotate(45deg);
+}
+.ribbonFinished::after {
+  position: absolute;
+  content: "Finished";
+  top: 11px;
+  right: -14px;
+  padding: 0.5rem;
+  width: 10rem;
+  background: rgb(56, 78, 122);
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
+.ribbonInprogress::after {
+  position: absolute;
+  content: "In progress";
+  top: 11px;
+  right: -14px;
+  padding: 0.5rem;
+  width: 10rem;
+  background: rgb(56, 78, 122);
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
 .project {
-  overflow: hidden;
+  position: relative;
+  margin: 0 20px;
   border-radius: 10px;
   box-shadow: $--bs-card;
+  .imgContainer {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
   .content {
     padding: 20px;
     display: flex;
@@ -22,6 +65,7 @@
   }
   .tech {
     padding: 20px;
+    margin-bottom: 70px;
     h4 {
       margin-bottom: 10px;
       display: block;
@@ -43,6 +87,11 @@
     }
   }
   .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     border-top: 1px solid $--clr-dark-gray;
     a {
       padding: 15px;
