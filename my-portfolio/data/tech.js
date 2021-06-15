@@ -10,13 +10,13 @@ export const tech = [
     level: 2,
   },
   {
-    name: "JavaScript",
-    time: Date.UTC(2020, 8, 1),
+    name: "Bootstrap",
+    time: Date.UTC(2020, 6, 1),
     level: 2,
   },
   {
-    name: "Next.js",
-    time: Date.UTC(2021, 3, 1),
+    name: "JavaScript",
+    time: Date.UTC(2020, 8, 1),
     level: 2,
   },
   {
@@ -25,7 +25,18 @@ export const tech = [
     level: 2,
   },
   {
+    name: "Next.js",
+    time: Date.UTC(2021, 3, 1),
+    level: 2,
+  },
+
+  {
     name: "Node.js",
+    time: Date.UTC(2021, 3, 1),
+    level: 1,
+  },
+  {
+    name: "SQL",
     time: Date.UTC(2021, 3, 1),
     level: 1,
   },
@@ -38,5 +49,14 @@ export const tech = [
     name: "MongoDB",
     time: Date.UTC(2021, 4, 1),
     level: 1,
+  },
+  {
+    name: "Authentication and authorization",
+    level: 0,
+  },
+  {
+    name: "Wordpress",
+
+    level: 0,
   },
 ];

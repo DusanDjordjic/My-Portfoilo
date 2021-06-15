@@ -73,6 +73,7 @@
     }
   }
 }
+
 .techsAdvanced {
   .techHeader {
     h3 {
@@ -105,6 +106,26 @@
   .techItemBasic {
     span {
       color: $--clr-red;
+    }
+  }
+}
+
+.techsLookingF {
+  .techHeader {
+    h3 {
+      color: $--clr-white;
+      background: linear-gradient(to top, $--clr-green 40%, transparent 40%);
+      background-clip: unset;
+      padding: 0;
+    }
+  }
+
+  .techItemLookingF {
+    span {
+      color: $--clr-green;
+    }
+    h4 {
+      margin: 0;
     }
   }
 }

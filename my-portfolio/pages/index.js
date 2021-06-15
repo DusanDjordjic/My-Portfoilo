@@ -9,7 +9,7 @@ import { tech } from "../data/tech";
 import { jsonify } from "../middleware/jsonify";
 import { dateFromNow } from "../middleware/dateFromNow";
 export default function Home(props) {
-  const { projects, basic, advanced } = props;
+  const { projects, basic, advanced, lookingF } = props;
   return (
     <div>
       <Head>
@@ -89,6 +89,25 @@ export default function Home(props) {
                 );
               })}
             </div>
+
+            <div className={`${classes.techs} ${classes.techsLookingF}`}>
+              <div className={classes.techHeader}>
+                <h3>Looking Forward To Learn:</h3>
+              </div>
+              {lookingF.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`${classes.techItem} ${classes.techItemLookingF}`}
+                  >
+                    <h4>{item.name}</h4>
+                    <p>
+                      <span>0</span> months
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
             {/* <TechContainer tech={tech} /> */}
           </div>
         </section>
@@ -117,6 +136,11 @@ export const getStaticProps = () => {
       advanced: jsonify(
         tech.filter((item) => {
           return item.level === 2;
+        })
+      ),
+      lookingF: jsonify(
+        tech.filter((item) => {
+          return item.level === 0;
         })
       ),
     },
