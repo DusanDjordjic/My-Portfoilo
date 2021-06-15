@@ -1,11 +1,11 @@
 import classes from "./Project.module.scss";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import WhiteBar from "../Bars/WhiteBar";
 
 import Link from "next/link";
 import Image from "next/image";
 const Project = (props) => {
-  const { title, imageSrc, github, tech, description, ribbon } = props;
+  const { title, imageSrc, github, website, tech, description, ribbon } = props;
   return (
     <div
       className={`${classes.project} ${
@@ -31,11 +31,32 @@ const Project = (props) => {
         </ul>
       </div>
       <div className={classes.footer}>
-        <Link href={github}>
-          <a>
-            <FaGithub />
-          </a>
-        </Link>
+        {github === "" ? (
+          <Link href="#">
+            <a className={classes.noLink}>
+              <FaGithub />
+            </a>
+          </Link>
+        ) : (
+          <Link href={github}>
+            <a>
+              <FaGithub />
+            </a>
+          </Link>
+        )}
+        {website === "" ? (
+          <Link href="#">
+            <a className={classes.noLink}>
+              <FaGlobe />
+            </a>
+          </Link>
+        ) : (
+          <Link href={website}>
+            <a>
+              <FaGlobe />
+            </a>
+          </Link>
+        )}
       </div>
     </div>
   );

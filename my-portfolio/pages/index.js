@@ -1,13 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 import LinkButton from "../components/Button/Button";
 import BallonSVG from "../components/BallonSVG/Ballon";
 import Bar from "../components/Bars/Bar";
 import ProjectsContainer from "../components/Projects/Container";
 import { projects } from "../data/projects";
+import { tech } from "../data/tech";
+import { jsonify } from "../middleware/jsonify";
+import { dateFromNow } from "../middleware/dateFromNow";
 export default function Home(props) {
-  const { projects } = props;
+  const { projects, basic, advanced } = props;
   return (
     <div>
       <Head>
@@ -44,6 +46,61 @@ export default function Home(props) {
             <ProjectsContainer projects={projects} />
           </div>
         </section>
+        <section className={`${classes.techSec} ${classes.section}`} id="tech">
+          <div className={classes.secTitle}>
+            <Bar />
+            <h2>Technologies</h2>
+          </div>
+          <div className={classes.techContainer}>
+            <div className={`${classes.techs} ${classes.techsBasic}`}>
+              <div className={classes.techHeader}>
+                <h3>Basic knowledge of:</h3>
+              </div>
+              {basic.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`${classes.techItem} ${classes.techItemBasic}`}
+                  >
+                    <h4>{item.name}</h4>
+                    <p>
+                      <span>{dateFromNow(item.time)}</span> months
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className={`${classes.techs} ${classes.techsAdvanced}`}>
+              <div className={classes.techHeader}>
+                <h3>Advanced knowledge of:</h3>
+              </div>
+              {advanced.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`${classes.techItem} ${classes.techItemAdvanced}`}
+                  >
+                    <h4>{item.name}</h4>
+                    <p>
+                      <span>{dateFromNow(item.time)}</span> months
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            {/* <TechContainer tech={tech} /> */}
+          </div>
+        </section>
+        <section
+          className={`${classes.aboutSec} ${classes.section}`}
+          id="about"
+        >
+          <div className={classes.secTitle}>
+            <Bar />
+            <h2>About me</h2>
+          </div>
+        </section>
       </main>
     </div>
   );
@@ -52,6 +109,16 @@ export const getStaticProps = () => {
   return {
     props: {
       projects: projects,
+      basic: jsonify(
+        tech.filter((item) => {
+          return item.level === 1;
+        })
+      ),
+      advanced: jsonify(
+        tech.filter((item) => {
+          return item.level === 2;
+        })
+      ),
     },
   };
 };

@@ -27,17 +27,23 @@ const Navigation = () => {
       <ul>
         <li>
           <Link href="https://github.com/DusanDjordjic">
-            <FaGithub />
+            <a>
+              <FaGithub />
+            </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.linkedin.com/in/du%C5%A1an-%C4%91or%C4%91i%C4%87-689110205/">
-            <FaLinkedin />
+            <a>
+              <FaLinkedin />
+            </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.instagram.com/dusan_spl/">
-            <RiInstagramFill />
+            <a>
+              <RiInstagramFill />
+            </a>
           </Link>
         </li>
       </ul>
