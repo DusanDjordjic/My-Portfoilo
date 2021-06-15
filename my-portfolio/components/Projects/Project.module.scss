@@ -1,0 +1,59 @@
+@import "../../styles/vars.scss";
+.project {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: $--bs-card;
+  .content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    h3 {
+      width: 100%;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+    div {
+      margin: 20px 0;
+    }
+  }
+  .tech {
+    padding: 20px;
+    h4 {
+      margin-bottom: 10px;
+      display: block;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li {
+        padding: 5px;
+        margin: 1px;
+        background-color: $--clr-hover-blue;
+        transition: $--tr-filter;
+        &:hover {
+          filter: brightness(120%);
+        }
+      }
+    }
+  }
+  .footer {
+    border-top: 1px solid $--clr-dark-gray;
+    a {
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $--tr-all;
+      &:hover {
+        background-color: $--clr-hover-blue;
+      }
+    }
+  }
+}

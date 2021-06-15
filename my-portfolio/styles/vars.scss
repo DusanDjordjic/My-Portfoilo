@@ -2,17 +2,28 @@
 
 $--clr-darkblue: #0f1624;
 $--clr-hover-blue: rgb(33, 45, 69);
+$--clr-light-blue: #52cbff;
 $--clr-white: #f4f4f4;
 $--clr-gray: rgba(#f4f4f4, 0.6);
-
+$--clr-dark-gray: rgba(#f4f4f4, 0.3);
 // fonts
 
 $--font-text-sm: 14px;
 $--font-text-md: 16px;
 $--font-text-lg: 18px;
+
+$--font-h1-sm: 36px;
+$--font-h1-md: 40px;
+$--font-h1-lg: 44px;
+
 $--font-h2-sm: 30px;
 $--font-h2-md: 36px;
 $--font-h2-lg: 40px;
+
+$--font-h3-sm: 20px;
+$--font-h3-md: 24px;
+$--font-h3-lg: 28px;
+
 $--font-h4-sm: 10px;
 $--font-h4-md: 12px;
 $--font-h4-lg: 14px;
@@ -20,6 +31,11 @@ $--font-h4-lg: 14px;
 // transition
 $--tr-filter: filter 0.2s;
 $--tr-all: all 0.2s;
+
 // svg sizes
 
 $--svg-size: 30px;
+
+// box shoadows
+
+$--bs-card: 0 0 5px 1px rgba(100,100,100, 0.7);

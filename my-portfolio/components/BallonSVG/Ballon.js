@@ -239,9 +239,9 @@ const Ballon = () => {
             y2="101.134"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#D68FF8" />
-            <stop offset="0.637909" stop-color="#43A8D3" />
-            <stop offset="1" stop-color="#00A0AA" />
+            <stop stopColor="#D68FF8" />
+            <stop offset="0.637909" stopColor="#43A8D3" />
+            <stop offset="1" stopColor="#00A0AA" />
           </linearGradient>
           <clipPath id="clip0">
             <rect width="382" height="291" fill="white" />
