@@ -1,11 +1,6 @@
 @import "../../styles/vars.scss";
 .button {
-  background: linear-gradient(
-    90deg,
-    #d68ff8 1.92%,
-    #52cbff 64.49%,
-    #00a0aa 100%
-  );
+  background-color: $--clr-light-blue;
   padding: 10px 30px;
   a {
     font-weight: 500;

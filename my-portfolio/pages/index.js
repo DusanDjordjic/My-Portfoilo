@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 import LinkButton from "../components/Button/Button";
 import BallonSVG from "../components/BallonSVG/Ballon";
@@ -7,7 +8,9 @@ import ProjectsContainer from "../components/Projects/Container";
 import { projects } from "../data/projects";
 import { tech } from "../data/tech";
 import { jsonify } from "../middleware/jsonify";
-import { dateFromNow } from "../middleware/dateFromNow";
+import TechContainer from "../components/Techs/TechContainer";
+import AboutContainer from "../components/About/AboutContainer";
+import BrandContainer from "../components/Brand/BrandContainer";
 export default function Home(props) {
   const { projects, basic, advanced, lookingF } = props;
   return (
@@ -51,65 +54,13 @@ export default function Home(props) {
             <Bar />
             <h2>Technologies</h2>
           </div>
-          <div className={classes.techContainer}>
-            <div className={`${classes.techs} ${classes.techsBasic}`}>
-              <div className={classes.techHeader}>
-                <h3>Basic knowledge of:</h3>
-              </div>
-              {basic.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${classes.techItem} ${classes.techItemBasic}`}
-                  >
-                    <h4>{item.name}</h4>
-                    <p>
-                      <span>{dateFromNow(item.time)}</span> months
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className={`${classes.techs} ${classes.techsAdvanced}`}>
-              <div className={classes.techHeader}>
-                <h3>Advanced knowledge of:</h3>
-              </div>
-              {advanced.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${classes.techItem} ${classes.techItemAdvanced}`}
-                  >
-                    <h4>{item.name}</h4>
-                    <p>
-                      <span>{dateFromNow(item.time)}</span> months
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className={`${classes.techs} ${classes.techsLookingF}`}>
-              <div className={classes.techHeader}>
-                <h3>Looking Forward To Learn:</h3>
-              </div>
-              {lookingF.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${classes.techItem} ${classes.techItemLookingF}`}
-                  >
-                    <h4>{item.name}</h4>
-                    <p>
-                      <span>0</span> months
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-            {/* <TechContainer tech={tech} /> */}
-          </div>
+          <TechContainer
+            data={[
+              { techs: basic, type: "basic" },
+              { techs: advanced, type: "advanced" },
+              { techs: lookingF, type: "lookingf" },
+            ]}
+          />
         </section>
         <section
           className={`${classes.aboutSec} ${classes.section}`}
@@ -119,6 +70,17 @@ export default function Home(props) {
             <Bar />
             <h2>About me</h2>
           </div>
+          <AboutContainer />
+        </section>
+        <section
+          className={`${classes.aboutSec} ${classes.section}`}
+          id="mybrand"
+        >
+          <div className={classes.secTitle}>
+            <Bar />
+            <h2>My Brand</h2>
+          </div>
+          <BrandContainer />
         </section>
       </main>
     </div>

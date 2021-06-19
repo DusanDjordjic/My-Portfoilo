@@ -1,0 +1,40 @@
+@import "./vars.scss";
+
+// GLOBALS
+.mainContainer {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.section {
+  padding: 20px;
+}
+.introSec {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+// MEDIA QUERIES
+
+@media only screen and (min-width: 768px) {
+  .mainContainer {
+    width: 95%;
+  }
+  .introSec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .mainContainer {
+    margin-top: 0px;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainContainer {
+    width: 80%;
+  }
+  .introSec {
+    grid-template-columns: 6fr 5fr;
+  }
+}

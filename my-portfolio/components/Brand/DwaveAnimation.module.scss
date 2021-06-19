@@ -1,0 +1,121 @@
+@import "../../styles/vars.scss";
+.content {
+  display: flex;
+  min-height: 200px;
+  justify-content: center;
+  position: relative;
+  h3 {
+    background-clip: none;
+    position: absolute;
+    font-size: 6rem;
+    font-weight: 700;
+    color: transparent;
+    background: none;
+    &:nth-child(1) {
+      -webkit-text-stroke: 2px $--clr-light-blue;
+    }
+    &:nth-child(2) {
+      color: $--clr-light-blue;
+      animation: wave 4s ease-in-out infinite;
+    }
+  }
+}
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      6% 42%,
+      13% 40%,
+      20% 39%,
+      28% 41%,
+      33% 44%,
+      38% 48%,
+      44% 53%,
+      50% 58%,
+      58% 64%,
+      66% 64%,
+      73% 61%,
+      82% 57%,
+      89% 54%,
+      95% 51%,
+      100% 50%,
+      100% 100%,
+      0% 100%
+    );
+    // clip-path: polygon(
+    //   0% 48%,
+    //   12% 49%,
+    //   24% 51%,
+    //   34% 56%,
+    //   47% 60%,
+    //   61% 62%,
+    //   75% 62%,
+    //   87% 61%,
+    //   95% 57%,
+    //   100% 53%,
+    //   100% 100%,
+    //   0% 100%
+    // );
+  }
+  50% {
+    clip-path: polygon(
+      0 64%,
+      7% 67%,
+      15% 68%,
+      22% 64%,
+      28% 59%,
+      32% 54%,
+      37% 49%,
+      43% 45%,
+      50% 42%,
+      59% 40%,
+      66% 39%,
+      75% 41%,
+      82% 45%,
+      89% 51%,
+      95% 55%,
+      100% 59%,
+      100% 100%,
+      0% 100%
+    );
+    // clip-path: polygon(
+    //   0 66%,
+    //   14% 66%,
+    //   25% 64%,
+    //   35% 60%,
+    //   48% 56%,
+    //   57% 52%,
+    //   67% 49%,
+    //   79% 48%,
+    //   91% 51%,
+    //   100% 56%,
+    //   100% 100%,
+    //   0% 100%
+    // );
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    min-height: 210px;
+    h3 {
+      font-size: 9rem;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .content {
+    min-height: 230px;
+    h3 {
+      font-size: 10rem;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .content {
+    min-height: 270px;
+    h3 {
+      font-size: 12rem;
+    }
+  }
+}

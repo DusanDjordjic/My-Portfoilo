@@ -1,7 +1,8 @@
+@import "../../styles/vars.scss";
 .bar {
   width: 50px;
   border-radius: 100px;
   height: 5px;
-  background: #fff;
+  background: $--clr-white;
   margin-bottom: 10px;
 }
