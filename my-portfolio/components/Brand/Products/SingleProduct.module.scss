@@ -1,0 +1,56 @@
+@import "../../../styles/vars.scss";
+.item {
+  user-select: none;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba($color: $--clr-gray, $alpha: 0.3);
+  .itemImg {
+    position: relative;
+  }
+  .itemOverlay {
+    transform: translateY(100%);
+    position: absolute;
+    inset: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $--clr-overlay;
+    transition: $--tr-transform;
+  }
+  .footer {
+    position: relative;
+    z-index: 10;
+    background-color: $--clr-white;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    h4,
+    p {
+      font-size: 1.2rem;
+      color: $--clr-darkblue;
+      width: 100%;
+      margin: 0;
+    }
+    div {
+      &:first-of-type {
+        h4 {
+          &:last-of-type {
+            font-size: 0.8rem;
+            color: $--clr-text-gray;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .itemImg {
+    }
+    .itemOverlay {
+      transform: translateY(0);
+    }
+  }
+}

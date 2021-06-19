@@ -8,6 +8,8 @@ $--clr-red: #cb404f;
 $--clr-white: #f4f4f4;
 $--clr-gray: rgba(#f4f4f4, 0.6);
 $--clr-dark-gray: rgba(#f4f4f4, 0.3);
+$--clr-overlay: rgba(#000000, 0.7);
+$--clr-text-gray: rgba(#000000, 0.5);
 // fonts
 
 $--font-text-sm: 14px;
@@ -33,7 +35,7 @@ $--font-h4-lg: 14px;
 // transition
 $--tr-filter: filter 0.2s;
 $--tr-all: all 0.2s;
-
+$--tr-transform: transform 0.2s;
 // svg sizes
 
 $--svg-size: 30px;

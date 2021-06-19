@@ -9,6 +9,7 @@
   border-radius: 20px;
   border: none;
   transition: $--tr-filter;
+  box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 1);
   &:hover {
     filter: brightness(115%);
   }

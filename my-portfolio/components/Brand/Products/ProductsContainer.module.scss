@@ -1,0 +1,12 @@
+@import "../../../styles/vars.scss";
+.productContainer {
+  overflow: hidden;
+  ul {
+    transform: translateX(0);
+    display: flex;
+    list-style: none;
+    li {
+      padding: 20px;
+    }
+  }
+}

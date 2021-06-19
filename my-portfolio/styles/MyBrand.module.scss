@@ -1,7 +1,7 @@
 @import "./vars.scss";
 
 // GLOBALS
-.mainContainer {
+.contentContainer {
   width: 100%;
   margin: 0 auto;
   margin-top: 70px;
@@ -9,32 +9,52 @@
 .section {
   padding: 20px;
 }
-.introSec {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr;
+.introContainer {
+  position: relative;
+
+  .introImg {
+    background-position: center;
+    background-size: cover;
+  }
+  .introText {
+    background-image: url("../public/wavebg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 50px;
+    h1,
+    p {
+      display: block;
+      text-align: center;
+      background-clip: none;
+      color: $--clr-white;
+      margin: 0;
+    }
+    .btnContainer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      font-style: italic;
+    }
+  }
 }
 // MEDIA QUERIES
 
 @media only screen and (min-width: 768px) {
-  .mainContainer {
+  .contentContainer {
     width: 95%;
-  }
-  .introSec {
-    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 992px) {
-  .mainContainer {
+  .contentContainer {
     margin-top: 0px;
     width: 90%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .mainContainer {
+  .contentContainer {
     width: 80%;
-  }
-  .introSec {
-    grid-template-columns: 6fr 5fr;
   }
 }
