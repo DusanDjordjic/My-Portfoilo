@@ -1,4 +1,5 @@
 import classes from "./ProductsContainer.module.scss";
+import Scrollbar from "smooth-scrollbar";
 import SingleProduct from "./SingleProduct";
 import { useEffect, useState, useRef } from "react";
 const ProductsContainer = () => {
@@ -10,6 +11,7 @@ const ProductsContainer = () => {
   const [sliderX, setSliderX] = useState(0);
   const [sliderMovedX, setSliderMovedX] = useState(0);
   const slider = useRef();
+  const myScrollbar = useRef();
   const container = useRef();
   const handleMouseDown = (e) => {
     const x = e.pageX;
@@ -50,7 +52,7 @@ const ProductsContainer = () => {
     window.addEventListener("mouseup", () => {
       setMouseDown(false);
     });
-
+    Scrollbar.initAll();
     return () => {
       window.removeEventListener("mouseup", () => {
         setMouseDown(false);
@@ -70,7 +72,7 @@ const ProductsContainer = () => {
   const handleTouchMove = (e) => {
     const touchX = e.changedTouches[0].pageX;
     console.log(e.changedTouches[0]);
-    let newX = sliderX + touchX - firstTouchX;
+    let newX = 2 * (sliderX + touchX - firstTouchX);
     if (newX < -slider.current.scrollWidth + container.current.scrollWidth) {
       newX = -slider.current.scrollWidth + container.current.scrollWidth;
     } else if (newX > 0) {
@@ -89,14 +91,14 @@ const ProductsContainer = () => {
 
   return (
     <div ref={container}>
-      <div className={classes.productContainer}>
+      <div className={classes.productContainer} ref={myScrollbar}>
         <ul
           ref={slider}
           onMouseDown={(e) => handleMouseDown(e)}
           onMouseUp={(e) => handleMouseUp(e)}
-          onTouchStart={(e) => handleTouchDown(e)}
-          onTouchEnd={(e) => handleTouchUp(e)}
-          onTouchMove={(e) => handleTouchMove(e)}
+          // onTouchStart={(e) => handleTouchDown(e)}
+          // onTouchEnd={(e) => handleTouchUp(e)}
+          // onTouchMove={(e) => handleTouchMove(e)}
           style={mouseDown ? { cursor: "grabbing" } : { cursor: "grab" }}
         >
           <li>
