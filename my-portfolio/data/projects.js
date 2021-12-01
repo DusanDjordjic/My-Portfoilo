@@ -6,7 +6,7 @@ export const projects = [
       "Website for a local shipbuilding company. The website displays information about the company, projects that they worked on, and contact information.",
     imageSrc: "/prImg1.png",
     github: "https://github.com/DusanDjordjic/My-Portfoilo",
-    website: "https://savadesing.net",
+    website: "http://savadesing.net",
     tech: ["Next.js", "SASS"],
     ribbon: "ribbonFinished",
   },
