@@ -20,12 +20,6 @@ const Navigation = () => {
         <li>
           <Link href="/#about">About</Link>
         </li>
-        <li>
-          <Link href="/mybrand">My Brand</Link>
-        </li>
-        <li>
-          <Link href="/mybrand/quotes">Quotes</Link>
-        </li>
       </ul>
       <ul>
         <li>

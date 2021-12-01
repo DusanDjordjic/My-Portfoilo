@@ -1,5 +1,5 @@
 import classes from "./TechSec.module.scss";
-import { dateFromNow } from "../../middleware/dateFromNow";
+
 const TechSec = ({ techs, type }) => {
   return (
     <article>
@@ -34,12 +34,6 @@ const TechSec = ({ techs, type }) => {
               }`}
             >
               <h4>{item.name}</h4>
-              <p>
-                <span>
-                  {dateFromNow(item.time) ? dateFromNow(item.time) : 0}
-                </span>{" "}
-                months
-              </p>
             </div>
           );
         })}

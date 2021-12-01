@@ -10,23 +10,15 @@ const AboutContainer = () => {
     <div className={classes.aboutContainer}>
       <article className={classes.textArticle}>
         <p className={classes.firstText}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-          consequatur harum <span> veritatis nisi</span> possimus laboriosam
-          vitae, autem unde neque, id necessitatibus. Obcaecati provident
-          accusamus eius eaque omnis quae vel exercitationem pariatur.{" "}
-          <span>Nam doloremque</span> necessitatibus tenetur, earum rerum
-          pariatur dolorum accusantium?
-        </p>
-        <p className={classes.quote}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-          consequatur harum veritatis nisi possimus laboriosam vitae.
+          My name is Dušan Đorđić, I am from Serbia, Sremska Mitrovica to be
+          exact. My passion is <span>programming, especially for the web.</span>{" "}
+          Looking forward to making some amazing web applications for a wide
+          range of clients. If you haven`t seen my projects, go take a look.
         </p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-          consequatur harum veritatis nisi possimus laboriosam vitae, autem unde
-          neque, id necessitatibus. Obcaecati provident accusamus eius eaque
-          omnis quae vel exercitationem pariatur. Nam doloremque necessitatibus
-          tenetur, earum rerum pariatur dolorum accusantium?
+          My dream is to meet people with the same passion as mine, to work with
+          them, and to make the world a better place. If you are like me, please
+          contact me and let us make some apps that will help other people.
         </p>
       </article>
       <article className={classes.sidebar}>
@@ -34,21 +26,15 @@ const AboutContainer = () => {
         <p>dukidjordjic@gmail.com</p>
         <ul>
           <li>
-            <Link href="/">
+            <Link href="https://www.linkedin.com/in/du%C5%A1an-%C4%91or%C4%91i%C4%87-689110205/">
               <a>
                 <FiLinkedin />
               </a>
             </Link>
           </li>
+
           <li>
-            <Link href="/">
-              <a>
-                <FiTwitter />
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
+            <Link href="https://www.instagram.com/dusan_spl/">
               <a>
                 <SiInstagram />
               </a>
